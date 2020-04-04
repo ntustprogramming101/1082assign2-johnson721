@@ -41,21 +41,21 @@ void draw() {
       if (groundhogMove) {
         switch (groundhogMoveX) {
           case 1:
-            groundhogPosX += 80 / groundhogFrame;
+            groundhogPosX = groundhogPosX + 80 / groundhogFrame;
             image(loadImage("img/groundhogRight.png"), groundhogPosX, groundhogPosY);
             break;
           case -1:
-            groundhogPosX -= 80 / groundhogFrame;
+            groundhogPosX = groundhogPosX - 80 / groundhogFrame;
             image(loadImage("img/groundhogLeft.png"), groundhogPosX, groundhogPosY);
             break;
         }
         switch (groundhogMoveY) {
           case 1:
-            groundhogPosY -= 80 / groundhogFrame;
+            groundhogPosY = groundhogPosY - 80 / groundhogFrame;
             image(loadImage("img/groundhogDown.png"), groundhogPosX, groundhogPosY);
             break;
           case -1:
-            groundhogPosY += 80 / groundhogFrame;
+            groundhogPosY = groundhogPosY + 80 / groundhogFrame;
             image(loadImage("img/groundhogIdle.png"), groundhogPosX, groundhogPosY);
             break;
         }
