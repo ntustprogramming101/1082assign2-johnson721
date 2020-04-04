@@ -10,9 +10,11 @@ void draw() {
   switch (gameState) {
     case GAME_START :
       background(loadImage("img/title.jpg"));
-      if (mouseX > 248 && mouseX < 392 && mouseY > 360 && mouseY < 420 && mousePressed) {
+      if (mouseX > 248 && mouseX < 392 && mouseY > 360 && mouseY < 420 ) {
         image(loadImage("img/startHovered.png"), 248, 360);
-        gameState = 2;
+        if ( mousePressed) {
+          gameState = GAME_RUN;
+        }
       } else {
         image(loadImage("img/startNormal.png"), 248, 360);
       }
